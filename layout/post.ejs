@@ -41,7 +41,7 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
               <%- partial('_partials/plugins/encrypt') %>
               <%- inject_point('postMarkdownEnd') %>
             <% } else { %>
-              <div class="markdown-body">
+              <div class="markdown-body" id="container">
                 <%- inject_point('postMarkdownBegin') %>
                 <%- page.content %>
                 <%- inject_point('postMarkdownEnd') %>
@@ -101,3 +101,16 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
     </div>
   </div>
 <% } %>
+
+<!-- 关注公众号获取验证码解锁文章内容的功能 -->
+<script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '27882-1666536373183-280',
+        name: '三年游戏人',
+        qrcode: 'https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/1.jpg',
+        keyword: 'more',
+    });
+</script>
