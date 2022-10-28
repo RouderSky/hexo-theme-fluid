@@ -17,9 +17,9 @@
         preload: 'none',
         audio: [
           {
-            name: 'song1',
-            artist: 'artist1',
-            url: '/songs/song1.mp3',
+            name: '樱花抄',
+            artist: '秒速5厘米',
+            url: 'http://www.ytmp3.cn/down/44148.mp3',
             cover: '/img/cover.jpg'
           }
         ]
