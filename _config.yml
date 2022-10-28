@@ -63,7 +63,8 @@ code:
       # 在链接中挑选 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/static/demo/
-      style: "github gist"
+      # style: "github gist"
+      style: "Atom One Dark Reasonable"
       # style: "Night Owl"
       style_dark: "dark"
 
@@ -237,6 +238,7 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/mac.css
 
 # 网页访问统计
 # Analysis of website visitors
