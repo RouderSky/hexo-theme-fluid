@@ -18,6 +18,9 @@ var subtitle = page.subtitle || page.title
           <% } %>
         </div>
 
+        <!-- 随机英文句子 -->
+        <p><a id="rainbow" href=''>🌈 获取中...</a></p>
+
         <% if (is_post()) { %>
           <%- inject_point('postMetaTop') %>
         <% } %>
@@ -31,3 +34,15 @@ var subtitle = page.subtitle || page.title
     </div>
   </div>
 </div>
+
+<!-- 随机英文句子 -->
+<script>
+  fetch('https://api.eatrice.top')
+    .then(response => response.json())
+    .then(data => {
+      var rainbow = document.getElementById('rainbow');
+      rainbow.innerHTML = data.Content;
+      rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
+    })
+    .catch(console.error)
+</script>
