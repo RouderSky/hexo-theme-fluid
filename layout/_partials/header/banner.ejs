@@ -14,12 +14,17 @@ var subtitle = page.subtitle || page.title
           <% if(theme.fun_features.typing.enable && in_scope(theme.fun_features.typing.scope)) { %>
             <span id="subtitle" data-typed-text="<%= subtitle %>"></span>
           <% } else { %>
-            <span id="subtitle"><%- subtitle %></span>
+            <span id="subtitle"><%= subtitle %></span>
           <% } %>
         </div>
 
         <!-- 随机英文句子 -->
         <p><a id="rainbow" href=''>🌈 获取中...</a></p>
+
+        <% if(theme.fun_features.neteaseMusic.enable) { %>
+          <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src= <%- theme.fun_features.neteaseMusic.url %>></iframe> -->
+          <%- theme.fun_features.neteaseMusic.content %>
+        <% } %>
 
         <% if (is_post()) { %>
           <%- inject_point('postMetaTop') %>

@@ -106,6 +106,10 @@ fun_features:
     # Options: home | post | tag | category | about | links | page | 404
     scope: []
 
+  neteaseMusic:
+    enable : false
+    content : '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=250 src="//music.163.com/outchain/player?type=0&id=7718453341&auto=1&height=430"></iframe>'
+
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
   anchorjs:
@@ -429,7 +433,7 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   # content: '<a>Engineer</a>'
-  content: '<a>见自己 见天地 见众生</a>'
+  content: '<a>见众生</a>'
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -483,7 +487,7 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "Engineer"
+    text: "a gamer, then an engineer"
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -589,7 +593,7 @@ post:
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 格式参照 ISO-8601 日期格式化
     # ISO-8601 date format
@@ -653,7 +657,7 @@ post:
 
     # CreativeCommons license
     # Options: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND
-    license: 'BY'
+    license: 'BY-NC-SA'
 
     # 显示作者
     author:
@@ -728,7 +732,7 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
@@ -802,12 +806,12 @@ valine:
   requiredFields: []
   pageSize: 10
   lang: 'zh-CN'
-  highlight: false
-  recordIP: false
+  highlight: true
+  recordIP: true
   serverURLs: 'https://wsbiosfp.lc-cn-n1-shared.com'
   emojiCDN:
   emojiMaps:
-  enableQQ: false
+  enableQQ: true
 
 # Waline
 # 从 Valine 衍生而来，额外增加了服务端和多种功能
@@ -890,7 +894,8 @@ giscus:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/20221023204641.png
+  banner_img: https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/wallhaven-5gl891.png
+  # banner_img: https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/wallhaven-o598z5.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -901,7 +906,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/20221023204641.png
+  banner_img: https://article-pic-res.oss-cn-hangzhou.aliyuncs.com/imgs/wallhaven-6k27yw.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
